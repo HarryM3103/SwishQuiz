@@ -1,0 +1,749 @@
+@font-face {
+    font-family: NBA;
+    src: url(/fonts/nba-spurs.ttf);
+}
+
+
+
+@media (max-width: 0px) {
+
+    .wrapper {
+        visibility: hidden;
+        position: absolute;
+        z-index: 2;
+        width: 650px;
+        margin: 130px auto 0;
+    }
+
+    .content {
+        margin-top: 15px;
+        padding: 20px;
+        border-radius: 7px;
+        background-color: white
+    }
+
+    .content .search {
+        position: relative;
+    }
+
+    .search input {
+        height: 40px;
+        width: 100%;
+        outline: none;
+        font-size: 17px;
+        border: 1px solid #b3b3b3;
+    }
+
+    .content .options {
+        margin-top: 10px;
+        max-height: 200px;
+        overflow: auto;
+    }
+
+    .options button {
+        position: absolute;
+        float: right;
+        left: 550px;
+    }
+
+    .options h5 {
+        font-size: 15pt;
+    }
+
+    .options h6 {
+        position: relative;
+        top: 0px;
+        left: 5px;
+    }
+
+    .options li {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        position: relative;
+        max-height: 50px;
+        padding: 0 13px;
+        font-size: 15px;
+        border-radius: 5px;
+        right: 50px;
+        display: flex;
+        cursor: pointer;
+        height: 50px;
+        line-height: 0px;
+        align-items: center;
+    }
+
+    .options li:hover {
+        background: #f2f2f2;
+
+    }
+
+
+    body {
+        font-family: NBA;
+        background-color: black;
+        height: 120vh;
+    }
+
+    div.title {
+        position: relative;
+        top: -10px;
+        /* border-radius: 25px; */
+        /* border: 5px solid #005bbb; */
+        background-color: #055bbb;
+        padding: 20px;
+        width: 100%;
+        height: 70px;
+
+        border-bottom: 0.5rem solid #fff;
+        right: 1%;
+    }
+
+    h1 {
+        position: relative;
+        top: -10px;
+        text-align: center;
+        font-size: 30px;
+
+        color: #ffffff;
+        /* color: white; */
+    }
+
+    h2 {
+        position: relative;
+        top: -20px;
+        text-align: center;
+        font-size: 15px;
+        color: #ffffff;
+
+    }
+
+
+    button.input {
+        font-family: NBA;
+        background-color: transparent;
+        border: 5px solid grey;
+        color: transparent;
+        background-color: #fff;
+        padding: 20px;
+        width: 20vh;
+        height: 20vh;
+        font-size: 20px;
+    }
+
+    button.input:hover {
+        font-family: NBA;
+        text-shadow: -0.5px -0.5px 0 #fff, 0.5px -0.5px 0 #fff, -.5px .5px 0 #fff, 0.5px 0.5px 0 #fff;
+        color: #005bbb;
+        border: 5px solid #005bbb;
+        background-color: grey;
+        padding: 20px;
+        width: 20vh;
+        height: 20vh;
+        font-size: 20px;
+    }
+
+    button.label {
+        font-family: NBA;
+        background-color: transparent;
+        border: 5px solid transparent;
+        background-color: transparent;
+        padding: 20px;
+        width: 20vh;
+        height: 15vh;
+        font-weight: 700;
+
+        color: #005bbb;
+
+        font-size: 20px;
+    }
+
+    button.guess {
+        font-family: NBA;
+        position: relative;
+        top: 30px;
+        right: 10px;
+        background-color: transparent;
+        border: 5px solid transparent;
+        background-color: transparent;
+        padding: 20px;
+        width: 20vh;
+        line-height: 80px;
+        box-sizing: border-box;
+        text-align: center;
+        height: 15vh;
+        font-weight: 700;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
+        color: #fff;
+
+        font-size: 70px;
+    }
+
+    button.guesses {
+        position: relative;
+        top: 120px;
+        font-family: NBA;
+        background-color: transparent;
+        border: 5px solid transparent;
+        background-color: transparent;
+        padding: 20px;
+        width: 20vh;
+        box-sizing: border-box;
+        text-align: left;
+        height: 15vh;
+        font-weight: 700;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
+        color: #fff;
+
+        font-size: 20px;
+    }
+
+    div.inputs {
+        position: relative;
+        margin: 0;
+        position: absolute;
+        top: 25%;
+        left: 22%;
+
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        /* left: 25%;
+    right: 25%; */
+        display: grid;
+        width: 50vw;
+        height: 50vh;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        width: 120px;
+        height: 120px;
+    }
+}
+
+
+@media (min-width: 0px) {
+
+    div.gameOver {
+        visibility: hidden;
+        background-color: white;
+        border: 3px solid red;
+        z-index: 6;
+        position: relative;
+        position: absolute;
+        bottom: 275px;
+        left: 435px;
+        width: 600px;
+        height: 250px;
+    }
+
+    button.restart {
+        font-family: NBA;
+        position: relative;
+        position: absolute;
+        height: 50px;
+        width: 100px;
+        bottom: 90px;
+        left: 250px;
+    }
+
+    .gameOver h1 {
+        color: red;
+        font-size: 35px;
+    }
+
+    div.teamslist {
+        display: flex;
+        justify-content: space-between;
+
+        z-index: 5;
+        position: relative;
+        margin: 0;
+        position: absolute;
+        top: 25%;
+        left: 22%;
+
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        /* left: 25%;
+    right: 25%; */
+        display: grid;
+        /* width: 50vw;
+        height: 50vh; */
+        padding: 20px;
+        grid-template-columns: repeat(6, 0.01fr);
+        grid-template-rows: repeat(6, 1fr);
+        width: 800px;
+        height: 500px;
+        background-color: #666666;
+        top: 440px;
+        left: 50%;
+
+    }
+
+    button.random {
+        cursor: pointer;
+        position: relative;
+        left: 365px;
+        font-family: NBA;
+        background-color: transparent;
+        border: 5px solid #055bbb;
+        color: #055bbb;
+        background-color: #fff;
+        padding: 20px;
+        width: 15vh;
+        height: 10vh;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    button.random:hover {
+        font-family: NBA;
+        color: white;
+        border: 5px solid #666666;
+        background-color: grey;
+        padding: 20px;
+        font-size: 20px;
+    }
+
+    button.newteam {
+        font-family: NBA;
+        color: #005bbb;
+        border-radius: 25px;
+        background: #fff;
+        font: 100px;
+        width: 100px;
+        height: 30px;
+        border: 3px solid #055bbb;
+        position: absolute;
+        top: 60%;
+        left: 6%;
+    }
+
+    button.unlimited{
+        font-family: NBA;
+        color: #005bbb;
+        border-radius: 25px;
+        background: #fff;
+        font: 100px;
+        width: 100px;
+        height: 30px;
+        border: 3px solid #055bbb;
+        position: absolute;
+        top: 50%;
+        left: 6%;
+    }
+
+    button.harry{
+        font-family: NBA;
+        color: #005bbb;
+        border-radius: 25px;
+        background: #fff;
+        font: 100px;
+        width: 100px;
+        height: 30px;
+        border: 3px solid #055bbb;
+        position: absolute;
+        top: 40%;
+        left: 6%;
+    }
+
+    button.t {
+        background: transparent;
+        width: 0px;
+        height: 0px;
+    }
+
+    button.close {
+        cursor: pointer;
+        border: none;
+        outline: none;
+        z-index: 10;
+        color: white;
+        position: relative;
+        left: 1110px;
+        bottom: 15px;
+        background: red;
+        border-color: #666666;
+        border-radius: 25px;
+        height: 40px;
+        width: 40px;
+    }
+
+    button.close:hover {
+        border: 1px solid black;
+        color: black;
+        background: white;
+
+    }
+
+    button.prompt {
+        font-family: NBA;
+        color: #fff;
+        border-color: transparent;
+        background-color: #666666;
+
+        font-size: 50px;
+        /* /* border-radius: 25px; */
+        background: #666666;
+        /* border: 3px solid #055bbb; */
+        margin: 0;
+        width: 840px;
+        position: absolute;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, 50%);
+        transform: translate(-50%, -390%);
+        z-index: 9;
+    }
+
+    .teamname {
+        cursor: pointer;
+        z-index: 7;
+        text-align: center;
+        font-family: NBA;
+        background-color: transparent;
+        border: 5px solid #055bbb;
+        color: #055bbb;
+        background-color: #fff;
+        padding: 20px;
+        width: 10vh;
+        height: 10vh;
+        font-size: 20px;
+    }
+
+    .teamname:hover {
+        font-family: NBA;
+        color: white;
+        border: 5px solid #666666;
+        background-color: grey;
+        padding: 20px;
+        width: 10vh;
+        height: 10vh;
+        font-size: 20px;
+    }
+
+    body {
+        font-family: NBA;
+        background-color: white;
+    }
+
+    button.Exit {
+        cursor: pointer;
+        border: none;
+        outline: none;
+        z-index: 6;
+        color: white;
+        position: relative;
+        left: 610px;
+        bottom: 40px;
+        background: red;
+        border-color: #666666;
+        border-radius: 25px;
+        height: 40px;
+        width: 40px;
+
+    }
+
+    button.Exit:hover {
+        border: 1px solid black;
+        color: black;
+        background: white;
+
+    }
+
+    .wrapper {
+        visibility: hidden;
+        position: relative;
+        z-index: 2;
+        width: 650px;
+        margin: 130px auto 0;
+    }
+
+    .content {
+        margin-top: 15px;
+        padding: 20px;
+        border: 1px solid black;
+        border-radius: 7px;
+        background-color: white
+    }
+
+    .content .search {
+        position: relative;
+    }
+
+    .search input {
+        height: 40px;
+        width: 100%;
+        outline: none;
+        font-size: 17px;
+        border: 1px solid #b3b3b3;
+    }
+
+    .content .options {
+        margin-top: 10px;
+        max-height: 200px;
+        overflow: auto;
+    }
+
+    .options button {
+        font-family: NBA;
+        width: 60px;
+        height: 25px;
+        color: white;
+        background-color: #005bbb;
+        outline: none;
+        border: none;
+        border-radius: 0.3em;
+        cursor: pointer;
+        position: absolute;
+        float: right;
+        left: 550px;
+    }
+
+    .options button:hover {
+        opacity: 50%;
+    }
+
+    .options h5 {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 10pt;
+    }
+
+    .options h6 {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: rgb(95, 95, 95);
+        position: relative;
+        top: 0px;
+        left: 5px;
+    }
+
+    .options li {
+        position: relative;
+        max-height: 50px;
+        padding: 0 13px;
+        font-size: 15px;
+        border-radius: 5px;
+        right: 50px;
+        display: flex;
+        cursor: pointer;
+        height: 50px;
+        line-height: 0px;
+        align-items: center;
+    }
+
+    /* .options li:hover {
+        background: #f2f2f2;
+
+    } */
+
+    div.title {
+        position: relative;
+        top: -10px;
+        /* border-radius: 25px; */
+        /* border: 5px solid #005bbb; */
+        background-color: #055bbb;
+        padding: 20px;
+        width: 100%;
+        height: 70px;
+
+        border-bottom: 0.5rem solid #fff;
+        right: 1%;
+    }
+
+    h1 {
+        position: relative;
+        top: -10px;
+        text-align: center;
+        font-size: 30px;
+
+        color: #ffffff;
+        /* color: white; */
+    }
+
+    h2 {
+        position: relative;
+        top: -20px;
+        text-align: center;
+        font-size: 15px;
+        color: #ffffff;
+
+    }
+
+
+    button.input {
+        font-family: NBA;
+        background-color: transparent;
+        border: 5px solid grey;
+        color: transparent;
+        padding: 20px;
+        width: 20vh;
+        height: 20vh;
+        font-size: 20px;
+    }
+
+    button.input:hover {
+        font-family: NBA;
+        text-shadow: -0.5px -0.5px 0 #fff, 0.5px -0.5px 0 #fff, -.5px .5px 0 #fff, 0.5px 0.5px 0 #fff;
+        cursor: pointer;
+
+        color: #005bbb;
+        border: 5px solid #005bbb;
+        background-color: grey;
+        padding: 20px;
+        width: 20vh;
+        height: 20vh;
+        font-size: 20px;
+    }
+
+    button.label {
+        font-family: NBA;
+        background-color: transparent;
+        border: 5px solid transparent;
+        background-color: transparent;
+        padding: 20px;
+        width: 20vh;
+        height: 15vh;
+        font-weight: 700;
+        text-shadow: -0.5px -0.5px 0 #fff, 0.5px -0.5px 0 #fff, -.5px .5px 0 #fff, 0.5px 0.5px 0 #fff;
+
+        color: #005bbb;
+
+        font-size: 20px;
+    }
+
+    button.guess {
+        font-family: NBA;
+        position: relative;
+        top: 30px;
+        right: 10px;
+        background-color: transparent;
+        border: 5px solid transparent;
+        background-color: transparent;
+        padding: 20px;
+        width: 20vh;
+        line-height: 80px;
+        box-sizing: border-box;
+        text-align: center;
+        height: 15vh;
+        font-weight: 700;
+        text-shadow: -2px -2px 0 #055bbb, 2px -2px 0 #055bbb, -2px 2px 0 #055bbb, 2px 2px 0 #055bbb;
+
+        color: #fff;
+
+        font-size: 70px;
+    }
+
+    button.guesses {
+        position: relative;
+        top: 120px;
+        font-family: NBA;
+        background-color: transparent;
+        border: 5px solid transparent;
+        background-color: transparent;
+        padding: 20px;
+        width: 20vh;
+        box-sizing: border-box;
+        text-align: left;
+        height: 15vh;
+        font-weight: 700;
+        text-shadow: -1px -1px 0 #055bbb, 1px -1px 0 #055bbb, -1px 1px 0 #055bbb, 1px 1px 0 #055bbb;
+        /* -webkit-text-stroke: 0.1px black; */
+        color: #fff;
+
+        font-size: 20px;
+    }
+
+    div.inputs {
+        position: relative;
+        margin: 0;
+        position: absolute;
+        top: 25%;
+        left: 30%;
+
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        /* left: 25%;
+    right: 25%; */
+        display: grid;
+        width: 50vw;
+        height: 50vh;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        width: 120px;
+        height: 120px;
+    }
+
+    button.sty {
+        font-family: NBA;
+        top: 125px;
+        position: absolute;
+        border-radius: 25px;
+        background: #000;
+        border: 3px solid #055bbb;
+        color: #fff;
+        padding: 2px;
+        width: 80px;
+        height: 30px;
+    }
+
+    button.sty1 {
+        top: 125px;
+        left: 6.8%;
+        position: absolute;
+        font-family: NBA;
+        border-radius: 25px;
+        background: #fff;
+        border: 3px solid #055bbb;
+        color: #666666;
+        padding: 2px;
+        width: 80px;
+        height: 30px;
+    }
+
+    button.sty2 {
+        top: 125px;
+        left: 13%;
+        position: absolute;
+        font-family: NBA;
+        border-radius: 25px;
+        background: #666666;
+        border: 3px solid #055bbb;
+        color: #fff;
+        padding: 2px;
+        width: 80px;
+        height: 30px;
+    }
+
+    button.newteam:hover {
+        cursor: pointer;
+        scale: 1.1;
+    }
+
+    button.unlimited:hover {
+        cursor: pointer;
+        scale: 1.1;
+    }
+
+    button.harry:hover {
+        cursor: pointer;
+        scale: 1.1;
+    }
+
+    button.sty:hover {
+        cursor: pointer;
+        scale: 1.1;
+    }
+
+    button.sty1:hover {
+        cursor: pointer;
+        scale: 1.1;
+    }
+
+    button.sty2:hover {
+        cursor: pointer;
+        scale: 1.1;
+    }
+
+
+}
